@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "AzureETEdf"
+		},
+		"LS_ADLS_accountKey": {
+			"value": ""
+		},
+		"LS_ONPrem_SQL_connectionString": {
+			"value": ""
+		},
+		"LS_Databricks_accessToken": {
+			"value": ""
+		},
+		"LS_ADLS_properties_typeProperties_url": {
+			"value": "https://rajatazureproject.dfs.core.windows.net/"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://ETEkeyvault.vault.azure.net/"
+		},
+		"LS_Databricks_properties_typeProperties_existingClusterId": {
+			"value": "0119-113236-fm53o023"
+		}
+	}
+}
