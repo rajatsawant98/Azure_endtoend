@@ -1,0 +1,9 @@
+{
+	"name": "AzureETEdf",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "4153ad21-421b-4fe9-8337-b8d8e1aa04e8",
+		"tenantId": "36f2524d-1d91-43d7-a6ab-233826af66b3"
+	}
+}
