@@ -5,20 +5,29 @@
 		"factoryName": {
 			"value": "AzureETEdf"
 		},
-		"LS_ADLS_accountKey": {
+		"AzureDataLakeStorage1_accountKey": {
 			"value": ""
 		},
-		"LS_ONPrem_SQL_connectionString": {
+		"LS_ADLS_accountKey": {
 			"value": ""
 		},
 		"LS_Databricks_accessToken": {
 			"value": ""
 		},
-		"LS_ADLS_properties_typeProperties_url": {
-			"value": "https://rajatazureproject.dfs.core.windows.net/"
+		"LS_ONPrem_SQL_connectionString": {
+			"value": ""
+		},
+		"SqlServer1_connectionString": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://asharsh.dfs.core.windows.net/"
 		},
 		"AzureKeyVault1_properties_typeProperties_baseUrl": {
 			"value": "https://ETEkeyvault.vault.azure.net/"
+		},
+		"LS_ADLS_properties_typeProperties_url": {
+			"value": "https://rajatazureproject.dfs.core.windows.net/"
 		},
 		"LS_Databricks_properties_typeProperties_existingClusterId": {
 			"value": "0119-113236-fm53o023"
