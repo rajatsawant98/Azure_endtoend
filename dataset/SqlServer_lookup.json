@@ -1,0 +1,16 @@
+{
+	"name": "SqlServer_lookup",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ONPrem_SQL",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "lookup_table"
+		}
+	}
+}
