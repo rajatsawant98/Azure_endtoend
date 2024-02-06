@@ -19,6 +19,14 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accessToken' of 'LS_Databricks'"
 		},
+		"LS_Databricks_loadtype_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'LS_Databricks_loadtype'"
+		},
+		"LS_Delta_staging_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_Delta_staging'"
+		},
 		"LS_ONPrem_SQL_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'LS_ONPrem_SQL'"
@@ -26,10 +34,6 @@
 		"SqlServer1_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'SqlServer1'"
-		},
-		"LS_Databricks_loadtype_accessToken": {
-			"type": "secureString",
-			"metadata": "Secure string for 'accessToken' of 'LS_Databricks_loadtype'"
 		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"type": "string",
@@ -50,6 +54,10 @@
 		"LS_Databricks_loadtype_properties_typeProperties_existingClusterId": {
 			"type": "string",
 			"defaultValue": "0119-113236-fm53o023"
+		},
+		"LS_Delta_staging_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://rajatazureproject.dfs.core.windows.net/"
 		},
 		"containerUri": {
 			"type": "string",
@@ -90,6 +98,9 @@
 					"LS_Databricks_loadtype_accessToken": {
 						"value": "[parameters('LS_Databricks_loadtype_accessToken')]"
 					},
+					"LS_Delta_staging_accountKey": {
+						"value": "[parameters('LS_Delta_staging_accountKey')]"
+					},
 					"LS_ONPrem_SQL_connectionString": {
 						"value": "[parameters('LS_ONPrem_SQL_connectionString')]"
 					},
@@ -110,6 +121,9 @@
 					},
 					"LS_Databricks_loadtype_properties_typeProperties_existingClusterId": {
 						"value": "[parameters('LS_Databricks_loadtype_properties_typeProperties_existingClusterId')]"
+					},
+					"LS_Delta_staging_properties_typeProperties_url": {
+						"value": "[parameters('LS_Delta_staging_properties_typeProperties_url')]"
 					}
 				}
 			},
