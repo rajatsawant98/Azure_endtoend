@@ -262,6 +262,33 @@
 						}
 					]
 				}
+			},
+			{
+				"name": "LT_layer1_to_2",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "ForEach_load",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Shared/loadtype_Layer1_to_layer2"
+				},
+				"linkedServiceName": {
+					"referenceName": "LS_Databricks_loadtype",
+					"type": "LinkedServiceReference"
+				}
 			}
 		],
 		"variables": {
