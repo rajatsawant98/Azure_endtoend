@@ -268,7 +268,7 @@
 				"type": "DatabricksNotebook",
 				"dependsOn": [
 					{
-						"activity": "Staging_to_append",
+						"activity": "Staging_to_layer1",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -291,7 +291,7 @@
 				}
 			},
 			{
-				"name": "Staging_to_append",
+				"name": "Staging_to_layer1",
 				"type": "DatabricksNotebook",
 				"dependsOn": [
 					{
