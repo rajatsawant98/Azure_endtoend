@@ -176,20 +176,47 @@
 										],
 										"outputs": [
 											{
-												"referenceName": "Sink_for_BothLoadType",
+												"referenceName": "DS_DeltaStaging",
 												"type": "DatasetReference",
 												"parameters": {
-													"tablename": {
-														"value": "@item().table_name",
-														"type": "Expression"
-													},
 													"schemaname": {
 														"value": "@item().table_schema",
+														"type": "Expression"
+													},
+													"tablename": {
+														"value": "@item().table_name",
 														"type": "Expression"
 													}
 												}
 											}
 										]
+									},
+									{
+										"name": "Notebook1",
+										"type": "DatabricksNotebook",
+										"dependsOn": [
+											{
+												"activity": "Copy_incremental",
+												"dependencyConditions": [
+													"Succeeded"
+												]
+											}
+										],
+										"policy": {
+											"timeout": "0.12:00:00",
+											"retry": 0,
+											"retryIntervalInSeconds": 30,
+											"secureOutput": false,
+											"secureInput": false
+										},
+										"userProperties": [],
+										"typeProperties": {
+											"notebookPath": "/Shared/Incremental_copy"
+										},
+										"linkedServiceName": {
+											"referenceName": "LS_Databricks_loadtype",
+											"type": "LinkedServiceReference"
+										}
 									}
 								],
 								"ifTrueActivities": [
