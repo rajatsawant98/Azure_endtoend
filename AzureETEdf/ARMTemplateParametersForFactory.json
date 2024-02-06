@@ -20,6 +20,9 @@
 		"SqlServer1_connectionString": {
 			"value": ""
 		},
+		"LS_Databricks_loadtype_accessToken": {
+			"value": ""
+		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"value": "https://asharsh.dfs.core.windows.net/"
 		},
@@ -30,6 +33,9 @@
 			"value": "https://rajatazureproject.dfs.core.windows.net/"
 		},
 		"LS_Databricks_properties_typeProperties_existingClusterId": {
+			"value": "0119-113236-fm53o023"
+		},
+		"LS_Databricks_loadtype_properties_typeProperties_existingClusterId": {
 			"value": "0119-113236-fm53o023"
 		}
 	}
