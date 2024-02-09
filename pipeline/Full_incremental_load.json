@@ -264,34 +264,7 @@
 				}
 			},
 			{
-				"name": "LT_layer1_to_2",
-				"type": "DatabricksNotebook",
-				"dependsOn": [
-					{
-						"activity": "Staging_to_layer1",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
-				"policy": {
-					"timeout": "0.12:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"notebookPath": "/Shared/loadtype_Layer1_to_layer2"
-				},
-				"linkedServiceName": {
-					"referenceName": "LS_Databricks_loadtype",
-					"type": "LinkedServiceReference"
-				}
-			},
-			{
-				"name": "Staging_to_layer1",
+				"name": "Layer1_to_Layer2_Split",
 				"type": "DatabricksNotebook",
 				"dependsOn": [
 					{
@@ -310,7 +283,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Shared/Incremental_copy"
+					"notebookPath": "/Shared/loadtype_Layer1_to_layer2_split"
 				},
 				"linkedServiceName": {
 					"referenceName": "LS_Databricks_loadtype",
