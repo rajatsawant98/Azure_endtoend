@@ -785,6 +785,33 @@
 							"referenceName": "LS_Databricks_loadtype",
 							"type": "LinkedServiceReference"
 						}
+					},
+					{
+						"name": "SP_to_UpdateLookup",
+						"type": "SqlServerStoredProcedure",
+						"dependsOn": [
+							{
+								"activity": "Layer1_to_Layer2_Split",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"storedProcedureName": "[[dbo].[Update_lookup]"
+						},
+						"linkedServiceName": {
+							"referenceName": "LS_ONPrem_SQL",
+							"type": "LinkedServiceReference"
+						}
 					}
 				],
 				"policy": {
@@ -800,6 +827,7 @@
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/SqlServer_lookup')]",
 				"[concat(variables('factoryId'), '/linkedServices/LS_Databricks_loadtype')]",
+				"[concat(variables('factoryId'), '/linkedServices/LS_ONPrem_SQL')]",
 				"[concat(variables('factoryId'), '/datasets/onPremSQLServer')]",
 				"[concat(variables('factoryId'), '/datasets/DS_DeltaStaging')]",
 				"[concat(variables('factoryId'), '/datasets/Sink_for_BothLoadType')]"
